@@ -1,21 +1,41 @@
 import express from 'express';
+import cors from 'cors'; 
+import cookieParser from 'cookie-parser'
 
 /*
-This project aims to be a simple starter code for Node.js, TypeScript and Express applications.
-No Application structure is defined (That's a bit of personal choice and likings).
 
-As of right now it is EXTREMELY Minimal. Plan is to add different versions and this one will be as is. 
+To start the app, run "npm run start:dev". Check the scripts in the package.json file.
+
+
+Simple Express JS (With Node.JS) Backend Application with TypeScript Setup.
+Very Minimal. No file structure. Basic to understand.
+
+Contains all the NPM packages needed for a very basic app.
+For Database connections, you might want to look into ORMs (Object Relational Mappers).
+I can recommend Mongoose for NoSQL (MongoDB) and Drizzle-ORM for SQL (Mainly PostgreSQL).
 
 */
 
 const app = express();
-const PORT = 3000;
+const PORT:number = 3000;
+
+//Recommended Middleware for beginners
+app.use(cors());
+app.use(cookieParser());
+app.use(express.json());
 
 app.get("/", (request, response) => {
-    response.send("Yo what's good?");
-})
+    response.send("Hello World!");
+});
 
-app.listen("3000", () => {
-console.log(`Backend running on PORT: ${PORT}`)
+
+
+//Example 
+app.get("/api/users", async (request, response) => {
+
+});
+
+app.listen(PORT, () => {
+console.log(`Backend Server running on: http://localhost:${PORT}/`)
 });
 
