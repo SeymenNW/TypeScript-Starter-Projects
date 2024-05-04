@@ -5,6 +5,8 @@ This project aims to shorten the time it takes to do the setup. But it's EXTREME
 
 The project has the Express Essentials installed, but nothing too advanced or much.
 
+## TypeScript Configuration, it just works.
+- This Starter can directly execute .ts and .tsx files just like vanilla JavaScript, with no extra configuration.
 
 ## Future Updates:
 - Adding a version of this with Bun
