@@ -10,7 +10,7 @@ To start the app, run "npm run start:dev". Check the scripts in the package.json
 Simple Express JS (With Node.JS) Backend Application with TypeScript Setup.
 Very Minimal. No file structure. Basic to understand.
 
-Contains all the NPM packages needed for a very basic app.
+Contains all the NPM packages needed for a very basic Node.js + Express JS app.
 For Database connections, you might want to look into ORMs (Object Relational Mappers).
 I can recommend Mongoose for NoSQL (MongoDB) and Drizzle-ORM for SQL (Mainly PostgreSQL).
 
@@ -25,7 +25,11 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.get("/", (request, response) => {
-    response.send("Hello World!");
+    response.send({"hello": "world", "whatToDo": "You should probably edit this..."});
+});
+
+app.get("/string", (request, response) => {
+    response.send("hello World!");
 });
 
 

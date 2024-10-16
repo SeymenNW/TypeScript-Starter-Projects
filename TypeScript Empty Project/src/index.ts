@@ -1,3 +1,10 @@
-//This is just an Empty TypeScript Project.. Use it for anything I guess,
+//This is an empty TypeScript project with the recommended settings enabled.
 
-console.log("Hello World");
+//Example
+const isValid = false;
+
+if (isValid) {
+    console.log("Valid!!")
+} else {
+    console.log("Hello World!")
+}
